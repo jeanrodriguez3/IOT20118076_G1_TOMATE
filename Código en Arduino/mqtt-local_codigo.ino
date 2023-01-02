@@ -60,7 +60,7 @@ void loop(){
             client.println("Connection: close");
             client.println();
             
-            // enciende y apaga los GPIO
+            // enciende y apaga el GPIO
             if (header.indexOf("GET /26/on") >= 0) {
               Serial.println("GPIO 26 on");
               ESTADO = "on";
@@ -94,8 +94,7 @@ void loop(){
             } else {
               client.println("<p><a href=\"/26/off\"><button class=\"button button2\">OFF</button></a></p>");
             } 
-               
-            // Display current state, and ON/OFF buttons for GPIO 27  
+            
             client.println("<h2>Temperatura "+t1+"C</h2>");
             client.println("<h2>Humedad "+h1+"%</h2>");
             // La respuesta HTTP termina con otra línea en blanco
