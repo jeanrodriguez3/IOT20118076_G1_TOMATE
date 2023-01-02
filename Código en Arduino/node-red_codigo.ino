@@ -101,10 +101,10 @@ void setup() {
   setup_wifi();//Se conecta a la red con SSID  y contraseña
   client.setServer(mqtt_server, 1883);//Se conecta al servidor 
   client.setCallback(callback);
-   // Read humidity
-    float h = dht.readHumidity();
-    // Read temperature as Celsius
-    float t = dht.readTemperature();
+  // Lee la humedad
+  float h = dht.readHumidity();
+  // Lee la temperatura en Celsius
+  float t = dht.readTemperature();
   delay(100);
 }
 
@@ -121,7 +121,7 @@ void loop() {
    
     // Lee la humedad
     float h = dht.readHumidity();
-    // Lee la temp en Celsius
+    // Lee la temperatura en Celsius
     float t = dht.readTemperature();
     //Condiciones para la activacion del riego
       if (t >= 25 && h <= 20){
